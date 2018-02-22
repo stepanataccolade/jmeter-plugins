@@ -51,7 +51,7 @@ public class ChromeDriverConfig extends WebDriverConfig<ChromeDriver> {
                 chromeOptions.setExperimentalOption("androidPackage", "com.android.chrome");
             }
             if (isHeadlessEnabled()) {
-                chromeOptions.addArguments("--headless");
+                chromeOptions.addArguments("--headless", "window-size=1024,768", "--no-sandbox");
             }
             capabilities.setCapability(ChromeOptions.CAPABILITY, chromeOptions);
         }
